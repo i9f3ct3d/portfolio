@@ -1,0 +1,10 @@
+.header__full-div{
+    text-align: left;
+}
+
+.header_text{
+    font-weight: 900;
+    font-family: 'Noto Sans';
+    font-size: 3rem;
+    color: #08FDD8;
+}

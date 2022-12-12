@@ -1,0 +1,53 @@
+.button__full-div{
+    background: none;
+    border: none;
+    outline: none;
+
+    color: #09FCD8;
+    border: 1px solid #09FCD8;
+    border-radius: 0;
+    height: 2.5rem;
+    width: 10rem;
+    min-width: fit-content;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+
+    transition: color 500ms ease-in-out;
+}
+
+.button__background{
+    position: absolute;
+    height: 200%;
+    width: 0;
+    background-color: #09FCD8;
+    left: -50%;
+    top: -50%;
+    transform: rotate(10deg);
+    z-index: -1;
+
+    transition: width 500ms ease-in-out;
+}
+
+.button__full-div:hover{
+    color: black;
+}
+.button__full-div:hover .button__background{
+    width: 200%;
+}
+.button__full-div:hover.button__full-div::before{
+    background-color: white;
+}
+
+.button__full-div::before{
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #09FCD8;
+
+    transition: color 500ms ease-in-out;
+}

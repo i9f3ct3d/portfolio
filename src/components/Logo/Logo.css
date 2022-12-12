@@ -1,0 +1,38 @@
+.logo__full-div{
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    border-bottom: 1px solid #3C3E42;
+}
+
+.logo__first-letter{
+    font-family: 'Roboto';
+    font-size: 8rem;
+    color: cyan;
+    margin: 0;
+    text-shadow: 8px 8px #FD2155;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.logo__rest-name{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.underline{
+    background-color: white;
+    height: 2px;
+    width: 0;
+    border-radius: 5px;
+    position: absolute;
+    left: 86px;
+    bottom: 25px;
+    transition: width 500ms ease-in-out;
+}

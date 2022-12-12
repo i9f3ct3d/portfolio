@@ -1,0 +1,54 @@
+.web-snap__full-div{
+    box-sizing: border-box;
+    max-width: 100rem;
+    width: 90%;
+    max-height: calc(100vh - 4rem);
+    position: fixed;
+    left: 50%;
+    bottom: calc(50% + 1.5rem);
+    transform: translate(-50%, 50%);
+    z-index: 12;
+    overflow-y: scroll;
+    border-radius: 2px;
+}
+
+.web-snap__closer-div{
+    position: absolute;
+    color: #525353;
+    right: 4px;
+    top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 2px solid #CDCDCC;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    cursor: pointer;
+}
+
+.web-snap__image{
+    width: 100%;
+    height: auto;
+    border: 10px solid white;
+    border-top-width: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    /* border: 2px solid #363636; */
+}
+
+.web-snap__full-div::-webkit-scrollbar{
+    width: 0;
+}
+
+.web-snap__github-icon{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #525353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}

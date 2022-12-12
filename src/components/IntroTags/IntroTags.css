@@ -1,0 +1,12 @@
+.intro-tags__full-div{
+    color: #3C3E42;
+    font-family: 'Noto Sans Mono';
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+.intro-tags__text{
+    margin: 5px 0;
+}
