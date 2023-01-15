@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Header from '../../components/Header/Header'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import useOnScreen from '../../Hooks/useOnScreen'
@@ -13,8 +13,6 @@ import PorfolioWeb from '../../Images/portfolioWeb.png'
 import ChathereWeb from '../../Images/chathereWeb.jpg'
 import ClassroomWeb from '../../Images/classroomWeb.png'
 import './Projects.css'
-// const GifssyWeb = lazy(() => import('../../Images/gifssyWeb.png'))
-// import useWebSnap from '../../Hooks/useWebSnap'
 
 const Projects = ({ }) => {
 
@@ -84,15 +82,12 @@ const Projects = ({ }) => {
                         />
                     </div>
                     <div className='project project4'>
-                        {/* <Suspense fallback = {<></>}> */}
                         <ProjectCard
                             img={GifssyImg}
-                            // onButtonClick = {() => {setWebImg('GIFSSY_WEB_IMG')}}
                             webSnapImg={GifssyWeb}
                             webSnapGithubLink='https://github.com/i9f3ct3d/GIFssY'
                             webSnapHostLink='https://gifssy.vercel.app/'
                         />
-                        {/* </Suspense> */}
                     </div>
                     <div className='project project5'>
                         <ProjectCard
@@ -100,7 +95,6 @@ const Projects = ({ }) => {
                             webSnapImg={ChathereWeb}
                             webSnapGithubLink='https://github.com/i9f3ct3d/Chathere-apk'
                             webSnapHostLink='https://github.com/i9f3ct3d/Chathere-apk'
-                        // onButtonClick = {() => {setWebImg('CHATHERE_WEB_IMG')}}
                         />
                     </div>
                 </div>

@@ -2,7 +2,7 @@
 import {memo,forwardRef, useEffect, useState} from "react";
 import Lottie from "react-lottie";
 
-const LottieAnimation = ({ lotti, width, height , isStopped , isloop , speed, style} , ref) => {
+const LottieAnimation = ({ lotti, width, height , isStopped , speed, style} , ref) => {
 
   const [modSpeed , setModSpeed] = useState(1);
     
@@ -25,9 +25,7 @@ const LottieAnimation = ({ lotti, width, height , isStopped , isloop , speed, st
 
   return (
 
-    // <>
       <Lottie style = {style && style} speed={modSpeed} isClickToPauseDisabled = {true} isStopped = {isStopped ? isStopped : false} ref={ref} options={defaultOptions} height={height} width={width} />
-    // </>
     
   );
 };

@@ -9,13 +9,11 @@ import { TbBrandPython } from "react-icons/tb";
 import "./Skills.css";
 import SkillsRatingBars from "../../components/SkillsRatingBars/SkillsRatingBars";
 import useOnScreen from "../../Hooks/useOnScreen";
-import { useState } from "react";
 
 const Skills = ({ }, ref) => {
 
     const rightBorderRef = useRef()
     const isVisible = useOnScreen(ref)
-    const baseDiameter = window.innerWidth <= 670 ? 50 : 100
 
     useEffect(() => {
         if(isVisible){
@@ -125,14 +123,12 @@ const Skills = ({ }, ref) => {
                             skillName="Python"
                             skillPercentage={70}
                         />
-                        {/* <span className="html_tags">{"</ ul >"}</span> */}
                     </div>
                     <div className="skill-leaves__container">
                         <SkillLeaves
                             diameter="100px"
                             text1={<span>BootStrap</span>}
                             text2={<span>Dart</span>}
-                            // delay={Math.floor(Math.random() * 5000 + 1)}
                             delay = {0}
                         />
                         <br />
@@ -143,7 +139,6 @@ const Skills = ({ }, ref) => {
                             diameter="200px"
                             text1={<span>C</span>}
                             text2={<span>JavaScript</span>}
-                            // delay={Math.floor(Math.random() * 5000 + 1)}
                             delay = {700}
                         />
                         <br />
@@ -154,7 +149,6 @@ const Skills = ({ }, ref) => {
                             diameter="250px"
                             text1={<span>HTML</span>}
                             text2={<span>React.js</span>}
-                            // delay={Math.floor(Math.random() * 5000 + 1)}
                             delay = {1400}
                         />
                         <br />
@@ -165,7 +159,6 @@ const Skills = ({ }, ref) => {
                             diameter="300px"
                             text1={<span>C++</span>}
                             text2={<span>Node.js</span>}
-                            // delay={Math.floor(Math.random() * 5000 + 1)}
                             delay = {2100}
                         />
                         <br />
@@ -176,7 +169,6 @@ const Skills = ({ }, ref) => {
                             diameter="250px"
                             text1={<span>CSS</span>}
                             text2={<span>Python</span>}
-                            // delay={Math.floor(Math.random() * 5000 + 1)}
                             delay = {2800}
                         />
                         <br />
@@ -187,7 +179,6 @@ const Skills = ({ }, ref) => {
                             diameter="200px"
                             text1={<span>MongoDB</span>}
                             text2={<span>Git</span>}
-                            // delay={Math.floor(Math.random() * 5000 + 1)}
                             delay = {3500}
                         />
                         <br />
@@ -198,7 +189,6 @@ const Skills = ({ }, ref) => {
                             diameter="100px"
                             text1={<span>MySQL</span>}
                             text2={<span>Flutter</span>}
-                            // delay={Math.floor(Math.random() * 5000 + 1)}
                             delay = {4200}
                         />
                     </div>

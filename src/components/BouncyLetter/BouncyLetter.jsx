@@ -1,4 +1,4 @@
-import React, { Children, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import useOnScreen from '../../Hooks/useOnScreen'
 import './BouncyLetter.css'
 

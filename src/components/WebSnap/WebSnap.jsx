@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { FaGithubSquare } from 'react-icons/fa'
 import "./WebSnap.css";
-import { useWebSnap, useWebSnapGithubLink, useWebSnapGithubLinkUpdate, useWebSnapHostLink, useWebSnapHostLinkUpdate, useWebSnapUpdate } from "../../context/webSnapContext";
+import { useWebSnap, useWebSnapGithubLink, useWebSnapGithubLinkUpdate, useWebSnapHostLinkUpdate, useWebSnapUpdate } from "../../context/webSnapContext";
 
 const WebSnap = ({ }) => {
   const webSnap = useWebSnap();

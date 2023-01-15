@@ -25,7 +25,6 @@ const MeSoFar = () => {
         <div className="me-so-far__container-div">
             <div>
                 <span style={{transform : 'translateX(-10px)', display : 'block'}} className="html_tags">{"< section >"}</span>
-                {/* <br /> */}
                 <span style={{ marginLeft: "0px" }} className="html_tags">
                     {"< h1 >"}
                 </span>
@@ -38,7 +37,6 @@ const MeSoFar = () => {
                         fontSize: '5rem'
                     }}
                     text="Me So-far"
-                // textColor='#FD2155'
                 />
                 <span style={{ marginLeft: "0px" }} className="html_tags">
                     {"</ h1 >"}

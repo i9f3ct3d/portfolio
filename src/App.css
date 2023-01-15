@@ -95,6 +95,7 @@ body,
 
 .base-background{
   width: calc(100% - calc(11rem + 10px));
+  min-height: 100vh;
   height: 100%;
   /* height: fit-content; */
   background: url(https://jacekjeznach.com/wp-content/themes/new/images/overlay.png)

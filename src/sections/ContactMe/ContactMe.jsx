@@ -1,6 +1,5 @@
 import React from 'react'
 import CustomInput from '../../components/CustomInput/CustomInput'
-import Header from '../../components/Header/Header'
 import Button from '../../components/Button/Button'
 import './ContactMe.css'
 
@@ -42,21 +41,15 @@ const ContactMe = () => {
                         type='textarea'
                         placeholder='Message'
                         style={{
-                            // width: 'calc(90% + 10px)',
                             height: '10rem',
-                            // marginTop: '5px'
                             gridArea : '3 / 1 / 4 / 3'
                         }}
                     />
-                    {/* <br />
-                    <br /> */}
                     <div className='contact-me__button-div'>
                         <Button
                             text='Contact Me'
                             style = {{
-                                // width : '100%',
                                 gridArea : '4 / 2 / 5 / 3',
-                                // marginTop : '20px'
                             }}
                         />
                     </div>
@@ -81,15 +74,9 @@ const ContactMe = () => {
             <br/>
             <br/>
             </>    }
-            {/* <div style = {{marginTop : '120px'}} className='html_tags'>{'</ section >'}</div> */}
             <div style = {{
                 transform : 'translateX(-15px)'
             }} className='html_tags'>{'< section >'}</div>
-            {/* {window.innerWidth <= 700 && 
-                  <>
-                  <br/>
-                  <br/>
-                  </>} */}
         </div>
     )
 }

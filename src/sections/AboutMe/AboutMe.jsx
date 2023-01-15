@@ -24,7 +24,6 @@ const AboutMe = () => {
         <span style={{marginLeft : '0px'}} className='html_tags'>{'</ h1 >'}</span>
         <div className='about-me__text-lottie__div'>
             <div className='about-me__text-div'>
-                {/* <div className='intro-tags__full-div'> */}
                     <span className='html_tags'>{'< li >'}</span>
                     <p className = 'about-me__text'>Hey👋, I'm a senior Computer Science and Engineering student at National Institute of Technology, Durgapur and this is where my love story with coding began.</p>
                     <span className='html_tags'>{'</ li >'}</span>
@@ -36,8 +35,6 @@ const AboutMe = () => {
                     <span className='html_tags'>{'< li >'}</span>
                     <p style = {{color : '#D36DD5'}} className = 'about-me__text'>Currently I have a job offer from Microsoft as a Software Engineer and want to see myself working there with positive people. Other than that since my love and passion remain biased towards the technical fields I want to keep myself focused on that.</p>
                     <span className='html_tags'>{'</ li >'}</span>
-
-                {/* </div> */}
             </div>
             <div className='lottie-animation__div'>
                 <LottieAnimation

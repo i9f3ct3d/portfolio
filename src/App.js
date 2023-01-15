@@ -8,81 +8,69 @@ import {
 import Intro from "./sections/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./sections/AboutMe/AboutMe";
-import Skills from "./sections/Skills/Skills";
-import { useRef } from "react";
-import Projects from "./sections/Projects/Projects";
+import { lazy, useRef } from "react";
 import WebSnap from "./components/WebSnap/WebSnap";
 import Modal from "./components/Modal/Modal";
 import { WebSnapContextProvider } from "./context/webSnapContext";
-import MeSoFar from "./sections/MeSoFar/MeSoFar";
 import ContactMe from "./sections/ContactMe/ContactMe";
+import { Suspense } from "react";
+const Skills = lazy(() => import("./sections/Skills/Skills"))
+const Projects = lazy(() => import("./sections/Projects/Projects"))
+const MeSoFar = lazy(() => import("./sections/MeSoFar/MeSoFar"))
 
 function App() {
   const skillRef = useRef();
   const cursorRef = useRef()
 
   const onMouseMoveHandler = (e) => {
-    if(cursorRef.current){
+    if (cursorRef.current) {
       cursorRef.current.style.left = e.clientX + "px"
       cursorRef.current.style.top = e.clientY + "px"
     }
   }
 
-  
+
 
   return (
     <div onClick={() => {
-      if(cursorRef.current){
+      if (cursorRef.current) {
         cursorRef.current.classList.add('expand')
 
         setTimeout(() => {
           cursorRef.current.classList.remove('expand')
         }, 500)
       }
-    }} onMouseMove={(e) => {onMouseMoveHandler(e)}} className="App">
-      {!window.matchMedia("(pointer: coarse)").matches && <div ref = {cursorRef} className="custom_cursor"/>}
-      <div 
-      className="base-background"
+    }} onMouseMove={(e) => { onMouseMoveHandler(e) }} className="App">
+      {!window.matchMedia("(pointer: coarse)").matches && <div ref={cursorRef} className="custom_cursor" />}
+      <div
+        className="base-background"
       >
-      <WebSnapContextProvider>
-        <Router>
-          <Modal />
-          <Navbar />
-          <WebSnap />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Intro />
-                  {/* <div
-                    style = {{
-                      width : '50%',
-                      height : '2px',
-                      backgroundColor : 'white'
-                    }}
-                  /> */}
-                  <br />
-                  <AboutMe />
-                  <br/>
-                  <br/>
-                  <ContactMe />
-                  
-                  
-                  {/* <br/>
-                  <br/>
-                  <br/>
-                  <br/> */}
-                </>
-              }
-            />
-            <Route path="skills" element={<Skills ref={skillRef} />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="me-so-far" element={<MeSoFar />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </Router>
-      </WebSnapContextProvider>
+        <WebSnapContextProvider>
+          <Router>
+            <Modal />
+            <Navbar />
+            <WebSnap />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Intro />
+                    <br />
+                    <AboutMe />
+                    <br />
+                    <br />
+                    <ContactMe />
+                  </>
+                }
+              />
+              <Route path="skills" element={<Suspense fallback = {<>Loading...</>}><Skills ref={skillRef} /></Suspense>} />
+              <Route path="projects" element={<Suspense fallback = {<>Loading...</>}><Projects /></Suspense>} />
+              <Route path="me-so-far" element={<Suspense fallback = {<>Loading...</>}><MeSoFar /></Suspense>} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </Router>
+        </WebSnapContextProvider>
       </div>
     </div>
   );

@@ -1,10 +1,8 @@
 import React, { memo, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { BsFacebook, BsLinkedin, BsGithub } from 'react-icons/bs'
 import Logo from '../Logo/Logo'
 import NavLinks from '../NavLinks/NavLinks'
 import myImg from '../../Images/myImg2.jpg'
-import { RiCloseFill } from 'react-icons/ri'
 import './Navbar.css'
 import useOnScreen from '../../Hooks/useOnScreen'
 
@@ -30,16 +28,11 @@ const Navbar = () => {
         if(navbarRef.current) navbarRef.current.style.display = 'flex'
       }} className='hamburger-button__div'>
         <div className='hamburger-button hamburger-button1'/>
-        {/* <div className='hamburger-button hamburger-button2'/>
-        <div className='hamburger-button hamburger-button3'/> */}
       </div>
       <div ref = {navbarRef} className='navbar__full-div'>
         <div onClick = {() => {
           if(navbarRef.current) navbarRef.current.style.display = 'none'
         }} className='navbar__cross-icon__div'>
-          {/* <RiCloseFill
-            className='navbar__cross-icon'
-          /> */}
         </div>
         <div className='navbar__logo__full-div'>
           <Logo
@@ -82,13 +75,6 @@ const Navbar = () => {
             to='/projects'
             onClick={navLinksClickHandler}
           />
-          {/* <NavLinks
-            text='Contact'
-            style={{
-              borderTop: 'none'
-            }}
-            onClick={navLinksClickHandler}
-          /> */}
         </div>
         <div className='social-link__container'>
           <div onClick = {() => {
