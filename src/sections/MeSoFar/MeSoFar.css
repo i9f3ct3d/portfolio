@@ -2,7 +2,7 @@
     /* box-sizing: border-box; */
     min-height: 100vh;
     width: calc(100% - calc(15px));
-    margin-left: 15px;
+    padding-left: 15px;
     /* margin-right: 11rem; */
     /* padding-top: 40px; */
     /* box-sizing: content-box; */
