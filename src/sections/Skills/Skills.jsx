@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 import Header from "../../components/Header/Header";
 import SkillLeaves from "../../components/SkillLeaves/SkillLeaves";
 import { SiCplusplus, SiMongodb } from "react-icons/si";
@@ -8,28 +8,59 @@ import { AiOutlineHtml5 } from "react-icons/ai";
 import { TbBrandPython } from "react-icons/tb";
 import "./Skills.css";
 import SkillsRatingBars from "../../components/SkillsRatingBars/SkillsRatingBars";
+import useOnScreen from "../../Hooks/useOnScreen";
+import { useState } from "react";
 
 const Skills = ({ }, ref) => {
+
+    const rightBorderRef = useRef()
+    const isVisible = useOnScreen(ref)
+    const baseDiameter = window.innerWidth <= 670 ? 50 : 100
+
+    useEffect(() => {
+        if(isVisible){
+            if(rightBorderRef && rightBorderRef.current){
+                rightBorderRef.current.style.transform = 'translateY(0)'
+                rightBorderRef.current.style.opacity = '1'
+            }
+        }
+    }, [isVisible])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div ref={ref} className="skills__container-div">
             <div className="skills__full-div">
-                <span className="html_tags">{"< section >"}</span>
-                <br />
-                <span style={{ marginLeft: "30px" }} className="html_tags">
+                <span style = {{transform : 'translateX(-10px)', display : 'block'}} className="html_tags">{"< section >"}</span>
+                {/* <br /> */}
+                <span style={{ marginLeft: "0px" }} className="html_tags">
                     {"< h1 >"}
                 </span>
                 <Header
                     style={{
-                        marginLeft: "60px",
+                        marginLeft: "20px",
                     }}
                     text="My Skills"
+                    textStyle = {{
+                    fontFamily : 'Roboto',
+                    fontSize : '5rem'
+                }}
                 />
-                <span style={{ marginLeft: "30px" }} className="html_tags">
+                <span style={{ marginLeft: "20px" }} className="html_tags">
                     {"</ h1 >"}
                 </span>
                 <div className="skills__inner-div">
                     <div className="skills__rating-div">
-                        <span className="html_tags">{"< ul >"}</span>
+                        <span style = {{transform : 'translateX(-10px)', display : 'block'}} className="html_tags desc_html_tags">{'<p>'}</span>
+                            <p className="skills__desc">
+                                Since the beginning of my journey as a Computer Science and Engineering student I tried stacking up some lovely tech skills and most of them are listed here. Some of them are from my college and others are learnt from online educational websites.
+                                From my skill set you can probably assume that I quite much inclined towards development and want to build my career on that.
+                            </p>
+                        <span style = {{transform : 'translateX(-10px)', display : 'block'}} className="html_tags desc_html_tags">{'</p>'}</span>
+                        <div ref = {rightBorderRef} className="skills__rating-div__right-border"/>
+                        {/* <span className="html_tags">{"< ul >"}</span> */}
                         <SkillsRatingBars
                             style={{
                                 marginLeft: "20px",
@@ -94,14 +125,15 @@ const Skills = ({ }, ref) => {
                             skillName="Python"
                             skillPercentage={70}
                         />
-                        <span className="html_tags">{"</ ul >"}</span>
+                        {/* <span className="html_tags">{"</ ul >"}</span> */}
                     </div>
                     <div className="skill-leaves__container">
                         <SkillLeaves
                             diameter="100px"
                             text1={<span>BootStrap</span>}
                             text2={<span>Dart</span>}
-                            delay={Math.floor(Math.random() * 5000 + 1)}
+                            // delay={Math.floor(Math.random() * 5000 + 1)}
+                            delay = {0}
                         />
                         <br />
                         <br />
@@ -111,7 +143,8 @@ const Skills = ({ }, ref) => {
                             diameter="200px"
                             text1={<span>C</span>}
                             text2={<span>JavaScript</span>}
-                            delay={Math.floor(Math.random() * 5000 + 1)}
+                            // delay={Math.floor(Math.random() * 5000 + 1)}
+                            delay = {700}
                         />
                         <br />
                         <br />
@@ -121,7 +154,8 @@ const Skills = ({ }, ref) => {
                             diameter="250px"
                             text1={<span>HTML</span>}
                             text2={<span>React.js</span>}
-                            delay={Math.floor(Math.random() * 5000 + 1)}
+                            // delay={Math.floor(Math.random() * 5000 + 1)}
+                            delay = {1400}
                         />
                         <br />
                         <br />
@@ -131,7 +165,8 @@ const Skills = ({ }, ref) => {
                             diameter="300px"
                             text1={<span>C++</span>}
                             text2={<span>Node.js</span>}
-                            delay={Math.floor(Math.random() * 5000 + 1)}
+                            // delay={Math.floor(Math.random() * 5000 + 1)}
+                            delay = {2100}
                         />
                         <br />
                         <br />
@@ -141,7 +176,8 @@ const Skills = ({ }, ref) => {
                             diameter="250px"
                             text1={<span>CSS</span>}
                             text2={<span>Python</span>}
-                            delay={Math.floor(Math.random() * 5000 + 1)}
+                            // delay={Math.floor(Math.random() * 5000 + 1)}
+                            delay = {2800}
                         />
                         <br />
                         <br />
@@ -151,7 +187,8 @@ const Skills = ({ }, ref) => {
                             diameter="200px"
                             text1={<span>MongoDB</span>}
                             text2={<span>Git</span>}
-                            delay={Math.floor(Math.random() * 5000 + 1)}
+                            // delay={Math.floor(Math.random() * 5000 + 1)}
+                            delay = {3500}
                         />
                         <br />
                         <br />
@@ -161,11 +198,12 @@ const Skills = ({ }, ref) => {
                             diameter="100px"
                             text1={<span>MySQL</span>}
                             text2={<span>Flutter</span>}
-                            delay={Math.floor(Math.random() * 5000 + 1)}
+                            // delay={Math.floor(Math.random() * 5000 + 1)}
+                            delay = {4200}
                         />
                     </div>
                 </div>
-                <span className="html_tags">{"</ section >"}</span>
+                <span style = {{transform : 'translateX(-10px)', display : 'block'}} className="html_tags">{"</ section >"}</span>
             </div>
         </div>
     );

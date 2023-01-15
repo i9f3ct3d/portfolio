@@ -1,9 +1,11 @@
 import React from 'react'
 import './Button.css'
 
-const Button = ({text, onClick}) => {
+const Button = ({text, onClick, style}) => {
   return (
-    <button className='button__full-div'>
+    <button onClick = {() => {
+      onClick && onClick()
+    }} style = {style && style} className='button__full-div'>
         {text}
         <div className='button__background'/>
     </button>

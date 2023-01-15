@@ -1,0 +1,94 @@
+.background__full-div{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1 !important;
+    background-color: #0e0e0e;
+    background-color: #000000;
+}
+
+.background__star{
+    /* z-index: 0; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: url('../../Images/stars2.png');
+    background-position: left;
+    animation: animate 8s ease-in-out infinite, transformAnimate 16s linear infinite;
+    /* background-position: center; */
+    /* background-repeat: ; */
+    /* background-size: cover; */
+    /* opacity: 0.5; */
+}
+
+.background__star2{
+    /* z-index: 0; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: url('../../Images/stars2.png');
+    background-position: right;
+    animation-delay: -1s;
+}
+.background__star3{
+    /* z-index: 0; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: url('../../Images/stars2.png');
+    background-position: bottom;
+    animation-delay: -2s;
+}
+.background__star4{
+    /* z-index: 0; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: url('../../Images/stars2.png');
+    background-position: top;
+    animation-delay: -3s;
+}
+.background__star5{
+    /* z-index: 0; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: url('../../Images/stars2.png');
+    background-position: center;
+    animation-delay: -4s;
+}
+
+@keyframes animate {
+    0%, 20%, 40%, 60%, 80%, 100%{
+        opacity: 0;
+    }
+    10%, 30%, 50%, 70%, 90%{
+        opacity: 1;
+    }
+}
+
+@keyframes transformAnimate {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+    }
+}

@@ -1,0 +1,208 @@
+.contact-me__container-div {
+    /* box-sizing: border-box; */
+    min-height: 100vh;
+    width: calc(100% - calc(15px));
+    margin-left: 15px;
+    /* margin-right: 11rem; */
+    /* padding-top: 40px; */
+    /* box-sizing: content-box; */
+    overflow-y: hidden;
+    text-align: left;
+    position: relative;
+    overflow-y: visible;
+    height: fit-content;
+    /* display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.contact-me__full-div {
+    /* margin-left: 60px;
+    width: calc(100% - 60px);
+    box-sizing: border-box;
+    min-height: 100vh;
+    color: red; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+.contact-me__header-div{
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 10px;
+    z-index: 1;
+}
+
+.contact-me__header{
+    font-family: 'Roboto';
+    font-size: 20rem;
+    font-weight: 900;
+    color: #1C1D1C;
+    color: #262727;
+    margin: 0;
+    pointer-events: none;
+}
+.contact-me__inner-div{
+    position: relative;
+    margin-top: 15rem;
+    z-index: 2;
+
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    /* min-height: 100vh; */
+    min-height: calc(100vh - 15rem);
+    /* background-color: red; */
+    box-sizing: border-box;
+    color: red;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.contact-me__form-div{
+    /* background-color: white; */
+    width: 49%;
+    height: 20rem;
+    /* box-sizing: border-box; */
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* justify-content: stretch; */
+    /* column-gap: 10px; */
+    /* align-items: stretch; */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.contact-me__text-div{
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.contact-me__text{
+    color: white;
+    margin-left: 5px;
+    /* grid-area: 1 / 1 / 2 / 3; */
+    font-family: 'Roboto';
+
+}
+
+
+
+.contact-me__map-div{
+    width: 49%;
+    height: 100%;
+    height: calc(100vh - 15rem);
+    margin-bottom: 20px;
+}
+
+.contact-me__button-div{
+    width: 100%;
+    margin-top: 20px;
+    text-align: right;
+    transform: translateX(-10px);
+    position: relative;
+}
+
+.contact-me__button-div::before{
+    content: '</ form >';
+    position: absolute;
+    bottom: -1.2rem;
+    left: calc(-100% - 15px);
+    /* background-color: white; */
+    width: fit-content;
+    height: fit-content;
+    color: #5c5c5c;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.contact-me__html-tag__p{
+    position: relative;
+    overflow: visible;
+}
+
+.contact-me__html-tag__p::before{
+    content: '< form >';
+    position: absolute;
+    left: 0;
+    bottom: -1.8rem;
+    width: fit-content;
+    height: fit-content;
+    color: #5c5c5c;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width : 1330px){
+    .contact-me__container-div{
+        width: calc(100% - 20px);
+        margin-right: 20px;
+    }
+
+    .contact-me__inner-div{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+}
+
+@media only screen and (max-width : 1150px){
+    .contact-me__header{
+        font-size: 15rem;
+    }
+
+    .contact-me__inner-div{
+        margin-top: 10rem;
+    }
+}
+@media only screen and (max-width : 900px){
+    .contact-me__header{
+        font-size: 10rem;
+    }
+
+    .contact-me__inner-div{
+        margin-top: 7rem;
+    }
+}
+
+@media only screen and (max-width : 700px){
+    .contact-me__header-div{
+        left: -15px;
+    }
+
+    .contact-me__form-div{
+        width: 100%;
+    }
+
+    .contact-me__map-div{
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: 10px;
+    }
+    
+    .contact-me__form-div{
+        box-sizing: border-box;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width : 600px){
+    .contact-me__header{
+        font-size: 6rem;
+    }
+
+    .contact-me__inner-div{
+        margin-top: 3rem;
+    }
+}

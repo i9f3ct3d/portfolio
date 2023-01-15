@@ -1,52 +1,85 @@
-import React, { useRef } from 'react'
-import { FaGraduationCap } from 'react-icons/fa'
-import './InstitutionCard.css'
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
+import { FaGraduationCap } from "react-icons/fa";
+import { MdWork } from 'react-icons/md'
+import "./InstitutionCard.css";
 
-const InstitutionCard = ({style, imgSrc, id, institutionName, timeSpan, desc, link}) => {
+const InstitutionCard = (
+  { style, imgSrc, id, institutionName, timeSpan, desc, link, delay, animate, isWork }
+) => {
+  const colors = ["#FD2155", "#E4EE89", "#80D8F6", "#FEA400", "#D36DD5"];
+  const [index, setIndex] = useState(-1);
 
-    const textDivRef = useRef()
+  const cardRef = useRef();
 
-    const institutionCardOnMouseEnterHandler = () => {
+  useEffect(() => {
+    if (index === -1) {
+      setIndex(Math.floor(Math.random() * 5 + 0));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!cardRef.current) return;
+
+    if (animate) {
+      if (
+        !cardRef.current.classList.contains(
+          "animated_institution-card__full-div"
+        )
+      ) {
         setTimeout(() => {
-            if(textDivRef.current.classList.contains('animate-text__div')) return;
-            textDivRef.current.classList.add('animate-text__div')
-            // textDivRef.current.style.transform = 'translateY(calc(-100% + 4.8rem))'
-        }, 500)
+          cardRef.current.classList.add("animated_institution-card__full-div");
+        }, delay);
+      }
     }
-
-    const institutionCardOnMouseOutHandler = () => {
-        if(!textDivRef.current.classList.contains('animate-text__div')) return;
-        textDivRef.current.classList.remove('animate-text__div')
-        // textDivRef.current.style.transform = 'translateY(0)'
-    }
+  }, [animate]);
 
   return (
-    <div
-    id = {id}
-    style = {style && style}
-    // onMouseEnter={institutionCardOnMouseEnterHandler} 
-    // onMouseLeave = {institutionCardOnMouseOutHandler} 
-    className='institution-card__full-div'>
-        <div className='institution-card__image-div'>
-            <img src = {imgSrc} className='institution-card__image' alt = 'img'/>
-        </div>
-            <span className='institution-card__time'>{timeSpan}</span>
-        <div ref = {textDivRef} className='institution-card__text-div'>
-            <FaGraduationCap
-                className='institution-card__icon'
-            />
-            <br/>
-            <p className='institution-card__header'>{institutionName}</p>
-            <br/>
-            <br/>
-            <p className='institution-card__desc'>{desc}</p>
-            <br/>
-            <button className='institution-card__button'>LEARN MORE</button>
-            <br/>
-            <br/>
-        </div>
+    <div ref={cardRef} className="institution-card__full-div">
+      <div
+        style={{
+          backgroundColor: index !== -1 && colors[index],
+        }}
+        className="institution-card__top-border"
+      />
+      <p
+        style={{
+          color: index !== -1 && colors[index],
+        }}
+        className="institution-card__institution-name"
+      >
+        {institutionName}
+      </p>
+      <p className="institution-card__role">Student</p>
+      <p className="institution-card__time-span">{timeSpan}</p>
+      <p className="institution-card__desc">{desc}</p>
+      <a
+        style={{
+          backgroundColor: index !== -1 && colors[index],
+        }}
+        className="institution-card__link"
+        href={link}
+      >
+        LEARN MORE
+      </a>
+      {isWork ? <MdWork
+        style={{
+          backgroundColor: index !== -1 && colors[index],
+        }}
+        className="institution-card__icon"
+      /> : <FaGraduationCap
+        style={{
+          backgroundColor: index !== -1 && colors[index],
+        }}
+        className="institution-card__icon"
+      />}
     </div>
-  )
-}
+  );
+};
 
-export default InstitutionCard
+export default InstitutionCard;

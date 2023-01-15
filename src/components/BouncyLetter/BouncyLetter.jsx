@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { Children, useEffect, useRef } from 'react'
 import useOnScreen from '../../Hooks/useOnScreen'
 import './BouncyLetter.css'
 
-const BouncyLetter = ({letter, letterStyle, className, timeout}) => {
+const BouncyLetter = ({letter, letterStyle, className, timeout, children}) => {
 
     const isHoveAnimationCompleted = useRef(true);
     const bouncyLetterRef = useRef()
@@ -37,7 +37,7 @@ const BouncyLetter = ({letter, letterStyle, className, timeout}) => {
     <p ref  = {bouncyLetterRef} onMouseEnter={(e) => {
         takeCareOfHoverAnimation(e.target)
     }} style = {letterStyle && letterStyle} className= {`bouncy_letter ${className}`}>
-        {letter}
+        {letter}{children}
     </p>
   )
 }

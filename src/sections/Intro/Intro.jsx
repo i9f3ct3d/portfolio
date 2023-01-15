@@ -4,9 +4,14 @@ import Button from '../../components/Button/Button'
 import IntroTags from '../../components/IntroTags/IntroTags'
 import myImg from '../../Images/myImg2.jpg'
 import useOnScreen from '../../Hooks/useOnScreen'
+import { BiRightArrowAlt } from 'react-icons/bi'
 import './Intro.css'
 
 const Intro = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const imageRef = useRef()
     const imageBorderRef = useRef()
@@ -28,6 +33,8 @@ const Intro = () => {
 
   return (
     <div className='intro__full-div'>
+        <div className='scroll-down__indicator scroll-down__indicator1'><span>SCROLL DOWN</span><BiRightArrowAlt/></div>
+        <div className='scroll-down__indicator scroll-down__indicator2'><span>SCROLL DOWN</span><BiRightArrowAlt/></div>
         <div className='intro__text-div'>
             <BouncyLetter 
                 letter = 'H'
@@ -113,10 +120,10 @@ const Intro = () => {
                 <IntroTags
                     text = {
                         <>
-                            <span style = {{
+                            <span className = 'intro-page__tags__text' style = {{
                                 color : '#FD2155'
                             }}>{"</>"}</span>
-                            <span> Web Developer</span>
+                            <span className = 'intro-page__tags__text'> Software Engineer</span>
                         </>
                     }
 
@@ -127,10 +134,10 @@ const Intro = () => {
                 <IntroTags
                     text = {
                         <>
-                            <span style = {{
+                            <span className = 'intro-page__tags__text' style = {{
                                 color : 'cyan'
                             }}>{"</>"}</span>
-                            <span> Problem Solver</span>
+                            <span className = 'intro-page__tags__text'> Web Developer</span>
                         </>
                     }
 
@@ -141,10 +148,10 @@ const Intro = () => {
                 <IntroTags
                     text = {
                         <>
-                            <span style = {{
+                            <span className = 'intro-page__tags__text' style = {{
                                 color : 'whiteSmoke'
                             }}>{"</>"}</span>
-                            <span> Upcoming Software Engineer @Microsoft</span>
+                            <span className = 'intro-page__tags__text'> Problem Solver</span>
                         </>
                     }
                     style = {{
@@ -156,6 +163,13 @@ const Intro = () => {
             <br/>
             <Button
                 text = 'Contact Me'
+                onClick={() =>{
+
+                    const ele = document.getElementById('contact-me__id')
+                    ele && ele.scrollIntoView({
+                        behavior : 'smooth'
+                    })
+                }}
             />
         </div>
         <div className='intro-page__image-div'>

@@ -5,6 +5,12 @@
 .header_text{
     font-weight: 900;
     font-family: 'Noto Sans';
-    font-size: 3rem;
+    font-family: 'Dancing Script';
     color: #08FDD8;
+}
+
+@media only screen and (max-width : 550px) {
+    .header_text{
+        font-size: 3rem !important;
+    }
 }

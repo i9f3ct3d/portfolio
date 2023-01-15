@@ -1,0 +1,53 @@
+.custom-input__div{
+    /* box-sizing: border-box !important; */
+    position: relative;
+    height: 3rem;
+    width: 10rem;
+    /* height: 100%; */
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    /* margin: 0 5px; */
+    /* flex: 1; */
+}
+
+.custom-input{
+    outline: none;
+    border: none;
+    /* box-sizing: border-box; */
+    height: 100%;
+    width: calc(100% - 5px);
+    background-color: #2A2B2A;
+    padding: 0 20px;
+    font-family: 'Barlow Condensed';
+    font-weight: 400;
+    color: grey;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.custom-input_border{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #08FDD8;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: translateX(-120%);
+    transition: transform 200ms ease-in-out;
+}
+
+.custom-input:valid+.custom-input_border{
+    transform: translateX(0);
+}
+
+.custom-input:focus+.custom-input_border{
+    transform: translateX(0);
+}
+
+.contact-me__button-div{
+    display: inline-block;
+    margin-left: 5px;
+}

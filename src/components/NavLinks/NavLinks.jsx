@@ -1,11 +1,14 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './NavLinks.css'
 
-const NavLinks = ({text, style}) => {
+const NavLinks = ({text, style, onClick, to}) => {
   return (
-    <div style = {style && style} className='navlink__full-div'>
-        {text}
-    </div>
+    <NavLink to = {to ? to : '/'} style = {style && style} onClick = {() => {
+      onClick && onClick()
+    }} className='navlink__full-div'>
+        {({isActive}) => <div style = {{display : 'inline-flex', color : isActive && '#08FDD8'}}>{text}</div>}
+    </NavLink>
   )
 }
 

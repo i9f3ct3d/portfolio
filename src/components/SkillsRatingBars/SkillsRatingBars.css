@@ -1,5 +1,8 @@
 .skills-ratings-bars__full-div{
-    width: 20rem;
+    /* box-sizing: border-box !important; */
+    min-width: 20rem;
+    max-width: 35rem;
+    width: calc(100% - 2rem);
     height: 4rem;
     /* border: 1px solid white; */
     display: flex;

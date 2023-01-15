@@ -1,18 +1,22 @@
 .logo__full-div{
     width: 100%;
+    /* width: fit-content;
+    height: fit-content; */
+    height: fit-content;
+    width: fit-content;
     background-color: #000000;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: baseline;
     position: relative;
-    border-bottom: 1px solid #3C3E42;
+    
 }
 
 .logo__first-letter{
     font-family: 'Roboto';
     font-size: 8rem;
-    color: cyan;
+    color: #08FDD8;
     margin: 0;
     text-shadow: 8px 8px #FD2155;
     cursor: pointer;
@@ -24,15 +28,19 @@
     font-family: 'Roboto';
     font-size: 1.5rem;
     margin: 0;
+    /* position: relative; */
 }
 
 .underline{
+    display: inline-flex;
     background-color: white;
     height: 2px;
     width: 0;
     border-radius: 5px;
     position: absolute;
-    left: 86px;
-    bottom: 25px;
+    /* left: 80px;
+    bottom: 25px; */
+    left: 0;
+    bottom: -2px;
     transition: width 500ms ease-in-out;
 }

@@ -8,4 +8,6 @@
     border-left: none;
     border-right: none;
     color: #bfbfbf;
+    cursor: pointer;
+    text-decoration: none;
 }

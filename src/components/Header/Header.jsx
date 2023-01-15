@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import BouncyLetter from '../BouncyLetter/BouncyLetter'
 import './Header.css'
 
-const Header = ({text, style, textColor}) => {
+const Header = ({text, style, textColor, textStyle, className}) => {
 
     const [letterArray, setLetterArray] = useState([]);
 
@@ -32,11 +32,9 @@ const Header = ({text, style, textColor}) => {
                 return <BouncyLetter
                     key = {i}
                     letter = {letter}
-                    className = 'header_text'
+                    className = {'header_text ' + className}
                     timeout={i * 200}
-                    letterStyle = {{
-                        color : textColor && textColor
-                    }}
+                    letterStyle = {textStyle && textStyle}
                 />
             })
         }
