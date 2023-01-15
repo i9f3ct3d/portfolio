@@ -79,8 +79,8 @@ const Projects = ({ }) => {
                         <ProjectCard
                             img={PortfolioImg}
                             webSnapImg={PorfolioWeb}
-                            webSnapHostLink='#'
-                            webSnapGithubLink='#'
+                            webSnapHostLink='https://sushanta-saren.vercel.app/'
+                            webSnapGithubLink='https://github.com/i9f3ct3d/portfolio'
                         />
                     </div>
                     <div className='project project4'>
