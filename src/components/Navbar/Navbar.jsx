@@ -19,19 +19,29 @@ const Navbar = () => {
   }, [isVisible])
 
   const navLinksClickHandler = () => {
-    if(navbarRef.current && window.innerWidth <= 1330) navbarRef.current.style.display = 'none'
+    if(navbarRef.current && window.innerWidth <= 1330) hamburgerButtonClickHandler()
+  }
+
+  const hamburgerButtonClickHandler = () => {
+    console.log('clicked');
+      if(navbarRef.current){
+        navbarRef.current.classList.toggle('navbar-open')
+      }
   }
 
   return (
     <>
       <div onClick={() => {
-        if(navbarRef.current) navbarRef.current.style.display = 'flex'
+        // if(navbarRef.current) navbarRef.current.style.display = 'flex'
+        hamburgerButtonClickHandler()
       }} className='hamburger-button__div'>
         <div className='hamburger-button hamburger-button1'/>
       </div>
+
+
       <div ref = {navbarRef} className='navbar__full-div'>
         <div onClick = {() => {
-          if(navbarRef.current) navbarRef.current.style.display = 'none'
+          hamburgerButtonClickHandler();
         }} className='navbar__cross-icon__div'>
         </div>
         <div className='navbar__logo__full-div'>
@@ -44,12 +54,13 @@ const Navbar = () => {
           </div>
         </div>
         <div className='navlinks__container'>
+        <div>
           <NavLinks
-            text='Home'
+            text='HOME'
             onClick={navLinksClickHandler}
           />
           <NavLinks
-            text='Me so-far'
+            text='ME SO-FAR'
             style={{
               borderTop: 'none'
             }}
@@ -58,7 +69,7 @@ const Navbar = () => {
             onClick={navLinksClickHandler}
           />
           <NavLinks
-            text='My skills'
+            text='MY SKILLS'
             style={{
               borderTop: 'none'
             }}
@@ -67,7 +78,7 @@ const Navbar = () => {
             onClick={navLinksClickHandler}
           />
           <NavLinks
-            text='Projects'
+            text='PROJECTS'
             style={{
               borderTop: 'none'
             }}
@@ -75,6 +86,7 @@ const Navbar = () => {
             to='/projects'
             onClick={navLinksClickHandler}
           />
+          </div>
         </div>
         <div className='social-link__container'>
           <div onClick = {() => {

@@ -3,7 +3,6 @@
     font-size: 3rem;
     color: white;
     margin: 0;
-    /* text-shadow: 8px 8px #FD2155; */
     cursor: pointer;
     opacity: 0;
     transition: opacity 500ms ease-in-out, color 200ms ease-in-out;

@@ -4,10 +4,8 @@
     width: 100%;
     left: 0;
     top: 0;
-    /* background-color: red; */
     z-index: 11;
     background: url(https://jacekjeznach.com/wp-content/themes/new/images/overlay.png) repeat 0 0;
-    /* opacity: 0.5; */
     display: none;
 }
 

@@ -1,11 +1,7 @@
 .me-so-far__container-div {
-    /* box-sizing: border-box; */
     min-height: 100vh;
     width: calc(100% - calc(15px));
     padding-left: 15px;
-    /* margin-right: 11rem; */
-    /* padding-top: 40px; */
-    /* box-sizing: content-box; */
     overflow-y: hidden;
     text-align: left;
     display: flex;
@@ -20,16 +16,12 @@
     box-sizing: border-box;
     min-height: 100vh;
     color: red;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     
 }
 
 .me-so-far__institution-card__container{
     box-sizing: border-box;
     width: 100%;
-    /* height: fit-content; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -37,19 +29,6 @@
     row-gap: 40px;
     column-gap: 10px;
 }
-
-/*#card_1{
-    transform: scale(1);
-}
-#card_2{
-    transform: translateX(-100px) scale(0.9);
-}
-#card_3{
-    transform: scale(0.8);
-}
-#card_4{
-    transform: scale(0.7);
-} */
 
 @media only screen and (max-width : 1330px){
     .me-so-far__container-div {

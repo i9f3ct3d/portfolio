@@ -2,25 +2,20 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* color: cyan; */
-  /* animation: rotate 5s linear infinite; */
   transform-style: preserve-3d;
   
   width: 200px;
   height: 30px;
   position: relative;
   pointer-events: none;
-  /* border: 2px solid cyan; */
 }
 
 .skill-leaves__full-div-right{
     transform-origin: right;
-    /* border-right: 2px solid cyan; */
 }
 
 .skill-leaves__full-div-left{
     transform-origin: left;
-    /* border-left: 2px solid cyan; */
 }
 
 @keyframes rotate {
@@ -39,7 +34,6 @@
   font-weight: 900;
   font-size: 1.5rem;
   font-family: 'Noto Sans';
-  /* animation: rotateText 5s linear infinite; */
 }
 
 .skill-leaves__text-left{

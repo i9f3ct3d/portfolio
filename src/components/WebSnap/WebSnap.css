@@ -10,6 +10,16 @@
     z-index: 12;
     overflow-y: scroll;
     border-radius: 2px;
+
+    width: 1px;
+    height: 1px;
+
+    transition: height 500ms ease-in-out, width 500ms ease-in-out;
+}
+
+.web-snap__full-div__visible{
+    width: 90%;
+    height: auto;
 }
 
 .web-snap__closer-div{
@@ -34,7 +44,6 @@
     border-top-width: 40px;
     box-sizing: border-box;
     border-radius: 10px;
-    /* border: 2px solid #363636; */
 }
 
 .web-snap__full-div::-webkit-scrollbar{

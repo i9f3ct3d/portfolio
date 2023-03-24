@@ -19,12 +19,12 @@ const Intro = () => {
 
     useEffect(() => {
         if(isImageVisible){
-            imageRef.current.style.transform = 'translateX(0)'
+            imageRef.current.style.transform = 'scale(1)'
             imageRef.current.style.opacity = '1'
             imageBorderRef.current.style.transform = 'translateY(0)'
             imageBorderRef.current.style.opacity = '1'
         }else{
-            imageRef.current.style.transform = 'translateX(70%)'
+            imageRef.current.style.transform = 'scale(0.5)'
             imageRef.current.style.opacity = '0'
             imageBorderRef.current.style.transform = 'translateY(-70%)'
             imageBorderRef.current.style.opacity = '0'

@@ -1,13 +1,18 @@
 .navlink__full-div{
     width: 100%;
-    height: 4rem;
+    height: fit-content;
+    margin: 20px 0;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    border: 1px solid #3C3E42;
+    /* border: 1px solid #3C3E42; */
     border-left: none;
     border-right: none;
     color: #bfbfbf;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
     cursor: pointer;
     text-decoration: none;
+    font-family: 'Barlow Condensed';
 }

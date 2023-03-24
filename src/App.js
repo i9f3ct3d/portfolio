@@ -5,15 +5,15 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
-import Intro from "./sections/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
-import AboutMe from "./sections/AboutMe/AboutMe";
 import { lazy, useRef } from "react";
 import WebSnap from "./components/WebSnap/WebSnap";
 import Modal from "./components/Modal/Modal";
 import { WebSnapContextProvider } from "./context/webSnapContext";
-import ContactMe from "./sections/ContactMe/ContactMe";
 import { Suspense } from "react";
+const ContactMe = lazy(() => import( "./sections/ContactMe/ContactMe"))
+const AboutMe = lazy(() => import( "./sections/AboutMe/AboutMe"))
+const Intro = lazy(() => import( "./sections/Intro/Intro"))
 const Skills = lazy(() => import("./sections/Skills/Skills"))
 const Projects = lazy(() => import("./sections/Projects/Projects"))
 const MeSoFar = lazy(() => import("./sections/MeSoFar/MeSoFar"))
@@ -54,14 +54,14 @@ function App() {
               <Route
                 path="/"
                 element={
-                  <>
+                  <Suspense fallback = {<>Loading...</>}>
                     <Intro />
                     <br />
                     <AboutMe />
                     <br />
                     <br />
                     <ContactMe />
-                  </>
+                  </Suspense>
                 }
               />
               <Route path="skills" element={<Suspense fallback = {<>Loading...</>}><Skills ref={skillRef} /></Suspense>} />

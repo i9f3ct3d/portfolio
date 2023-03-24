@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { FaGithubSquare } from 'react-icons/fa'
 import "./WebSnap.css";
@@ -11,11 +11,22 @@ const WebSnap = ({ }) => {
   const updateGithubLink = useWebSnapGithubLinkUpdate()
   const updateHostLink = useWebSnapHostLinkUpdate()
 
+  const webSnapRef = useRef()
+
+  useEffect(() => {
+    if(webSnap){
+      webSnapRef.current.classList.add('web-snap__full-div__visible')
+    }else{
+      webSnapRef.current.classList.remove('web-snap__full-div__visible')
+    }
+  } ,[webSnap])
+
   return (
     <div
       style={{
         visibility: !webSnap && "hidden",
       }}
+      ref = {webSnapRef}
       className="web-snap__full-div"
     >
         <div className="web-snap__closer-div">

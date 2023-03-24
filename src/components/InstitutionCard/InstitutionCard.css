@@ -1,10 +1,7 @@
 .institution-card__full-div{
-    /* display: inline-block; */
     width: 30rem;
     min-height: 20rem;
-    /* background-color: white; */
     box-sizing: border-box;
-    /* border-top: 2px solid #FD2155; */
     padding: 20px;
     background-color: #0e0e0e;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -14,8 +11,6 @@
     transform: translateY(100px);
     opacity: 0;
     transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
-    /* margin: 20px; */
-    /* background-color: #0e0e0e; */
 }
 
 .institution-card__top-border{

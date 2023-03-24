@@ -1,0 +1,36 @@
+.about-me__text{
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    font-weight: 400;
+    word-spacing: 1px;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    /* border-radius: 20px 20px 20px 0; */
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: bottom left;
+    box-shadow: inset 10px 10px 20px black;
+    background-color: #1D1D1D;
+    position: relative;
+
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+.about-me__text-chat-point{
+    position: absolute;
+    left: 20px;
+    top: 100%;
+    background-color: transparent;
+    height: 0;
+    width: 0;
+    border-top: 20px solid #fff;
+    border-right: 25px solid transparent;
+}
+
+.about-me__text-visible{
+    transform: scale(1);
+    opacity: 1;
+}

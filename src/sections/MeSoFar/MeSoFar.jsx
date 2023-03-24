@@ -84,7 +84,7 @@ const MeSoFar = () => {
                                 delay={800}
                                 imgSrc='https://assets.telegraphindia.com/telegraph/2021/Aug/1629653572_23metnit_4col.jpg'
                                 timeSpan='2019 - 2023'
-                                desc='Currently pursuing my bachelor degree in Computer Science and Engineering from here. And this has been probably the most important phase of my life.'
+                                desc='Currently pursuing my bachelor degree in Computer Science and Engineering from here. And this has been the spiciest phase of my life.'
                                 institutionName='National Institute of Technology, Durgapur'
                                 animate = {animate}
                             />
