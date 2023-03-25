@@ -269,6 +269,15 @@
 }
 
 @media only screen and (max-width: 1330px) {
+  @keyframes animateNavbarOpener {
+      0%{
+
+      }
+      50%{
+        transform: scaleX(1);
+      }
+  }
+
   .navbar__full-div {
     /* display: none; */
     width: 100%;

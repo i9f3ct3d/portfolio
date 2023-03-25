@@ -27,8 +27,8 @@ const Navbar = () => {
       if(navbarRef.current){
         navbarRef.current.style.transitionDelay = '0ms, 0ms, 500ms, 500ms, 0ms'
         navbarRef.current.style.transform = 'scaleY(1) scaleX(1)';
-        navbarRef.current.style.right = '0'
-        navbarRef.current.style.top = '0'
+        // navbarRef.current.style.right = '0'
+        // navbarRef.current.style.top = '0'
         navbarRef.current.style.zIndex = '10'
         navbarRef.current.style.opacity = '1'
       }
@@ -38,8 +38,8 @@ const Navbar = () => {
       if(navbarRef.current){
         navbarRef.current.style.transitionDelay = '500ms, 500ms, 0ms, 0ms, 500ms'
         navbarRef.current.style.transform = 'scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')';
-        navbarRef.current.style.right = '10px'
-        navbarRef.current.style.top = '10px'
+        // navbarRef.current.style.right = '10px'
+        // navbarRef.current.style.top = '10px'
         navbarRef.current.style.zIndex = '9'
         navbarRef.current.style.opacity = '0'
     }
