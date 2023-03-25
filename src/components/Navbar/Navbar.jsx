@@ -25,8 +25,24 @@ const Navbar = () => {
   const hamburgerButtonClickHandler = () => {
     console.log('clicked');
       if(navbarRef.current){
-        navbarRef.current.classList.toggle('navbar-open')
+        navbarRef.current.style.transitionDelay = '0ms, 0ms, 500ms, 500ms, 0ms'
+        navbarRef.current.style.transform = 'scaleY(1) scaleX(1)';
+        navbarRef.current.style.right = '0'
+        navbarRef.current.style.top = '0'
+        navbarRef.current.style.zIndex = '10'
+        navbarRef.current.style.opacity = '1'
       }
+    }
+    
+    const navbarCloseHandler = () => {
+      if(navbarRef.current){
+        navbarRef.current.style.transitionDelay = '500ms, 500ms, 0ms, 0ms, 500ms'
+        navbarRef.current.style.transform = 'scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')';
+        navbarRef.current.style.right = '10px'
+        navbarRef.current.style.top = '10px'
+        navbarRef.current.style.zIndex = '9'
+        navbarRef.current.style.opacity = '0'
+    }
   }
 
   return (
@@ -39,9 +55,11 @@ const Navbar = () => {
       </div>
 
 
-      <div ref = {navbarRef} className='navbar__full-div'>
+      <div ref = {navbarRef} style = {{
+        transform : 'scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')'
+      }} className='navbar__full-div'>
         <div onClick = {() => {
-          hamburgerButtonClickHandler();
+          navbarCloseHandler();
         }} className='navbar__cross-icon__div'>
         </div>
         <div className='navbar__logo__full-div'>
