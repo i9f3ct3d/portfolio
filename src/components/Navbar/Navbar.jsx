@@ -19,7 +19,7 @@ const Navbar = () => {
   }, [isVisible])
 
   const navLinksClickHandler = () => {
-    if(navbarRef.current && window.innerWidth <= 1330) hamburgerButtonClickHandler()
+    if(navbarRef.current && window.innerWidth <= 1330) navbarCloseHandler()
   }
 
   const hamburgerButtonClickHandler = () => {
