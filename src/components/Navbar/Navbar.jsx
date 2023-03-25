@@ -56,7 +56,7 @@ const Navbar = () => {
 
 
       <div ref = {navbarRef} style = {{
-        transform : 'scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')'
+        transform : window.innerWidth <= 1330 && 'scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')'
       }} className='navbar__full-div'>
         <div onClick = {() => {
           navbarCloseHandler();
