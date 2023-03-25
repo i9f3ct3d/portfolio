@@ -1,4 +1,5 @@
 .navbar__full-div {
+
   box-sizing: border-box;
   width: 11rem;
   height: 100vh;
@@ -7,8 +8,7 @@
   top: 0;
   z-index: 10;
   background-color: #181818;
-  transition: box-shadow 500ms ease-in-out, transform 500ms ease-in-out, right 500ms ease-in-out, top 500ms ease-in-out, opacity 500ms ease-in-out;
-  /* transition-delay: 500ms, 500ms, 0ms, 0ms, 500ms; */
+  transition: box-shadow 500ms ease-in-out;
 
   display: flex;
   flex-direction: column;
@@ -271,31 +271,42 @@
 @media only screen and (max-width: 1330px) {
   @keyframes animateNavbarOpener {
       0%{
-
+        transform: var(--customTransform);
+        opacity: 0;
       }
       50%{
-        transform: scaleX(1);
+        transform: translate(-10px, 10px) scaleX(1) scaleY(1);
+        opacity: 1;
+      }
+      100%{
+        transform: translate(0, 0) scaleX(1) scaleY(1);
+        opacity: 1;
       }
   }
 
-  .navbar__full-div {
-    /* display: none; */
-    width: 100%;
+  @keyframes animateNavbarCloser {
+    0%{
+      transform: translate(0, 0) scaleX(1) scaleY(1);
+      opacity: 1;
+    }
+    50%{
+      transform: translate(-10px, 10px) scaleX(1) scaleY(1);
+      opacity: 1;
+    }
+    100%{
+      transform: var(--customTransform);
+      opacity: 0;
+    }
+}
 
-    /* height: 2rem;
-    width: 2rem;
-    transform: translate(-10px, 10px);
-    opacity: 0; */
+  .navbar__full-div {
+    width: 100%;
     z-index: 9;
     border: 2px solid white;
     border-radius: 0;
     overflow : hidden;
     transform-origin: top right;
-    right: 10px;
-    top: 10px;
-    opacity: 0;
-
-    /* transform: scaleY(calc(100% / 16)); */
+    transform: var(--customTransform);
   }
 
   .navbar-open{

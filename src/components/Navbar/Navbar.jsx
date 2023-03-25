@@ -13,6 +13,10 @@ const Navbar = () => {
   const navbarRef = useRef()
 
   useEffect(() => {
+      navbarRef.current.style.setProperty('--customTransform', 'translate(-10px, 10px) scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')')
+  },[])
+
+  useEffect(() => {
     if (isVisible && imageRef.current) {
       imageRef.current.classList.add('navbar__image-div__visible')
     }
@@ -25,23 +29,19 @@ const Navbar = () => {
   const hamburgerButtonClickHandler = () => {
     console.log('clicked');
       if(navbarRef.current){
-        navbarRef.current.style.transitionDelay = '0ms, 0ms, 500ms, 500ms, 0ms'
-        navbarRef.current.style.transform = 'scaleY(1) scaleX(1)';
-        // navbarRef.current.style.right = '0'
-        // navbarRef.current.style.top = '0'
+        navbarRef.current.style.animation = 'animateNavbarOpener 1000ms ease-in-out'
         navbarRef.current.style.zIndex = '10'
         navbarRef.current.style.opacity = '1'
+        navbarRef.current.style.transform = 'translate(0, 0) scaleX(1) scaleY(1)';
       }
     }
     
     const navbarCloseHandler = () => {
       if(navbarRef.current){
-        navbarRef.current.style.transitionDelay = '500ms, 500ms, 0ms, 0ms, 500ms'
-        navbarRef.current.style.transform = 'scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')';
-        // navbarRef.current.style.right = '10px'
-        // navbarRef.current.style.top = '10px'
+        navbarRef.current.style.animation = 'animateNavbarCloser 1000ms ease-in-out'
         navbarRef.current.style.zIndex = '9'
         navbarRef.current.style.opacity = '0'
+        navbarRef.current.style.transform = 'translate(-10px, 10px) scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')';
     }
   }
 
@@ -56,7 +56,6 @@ const Navbar = () => {
 
 
       <div ref = {navbarRef} style = {{
-        transform : window.innerWidth <= 1330 && 'scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')'
       }} className='navbar__full-div'>
         <div onClick = {() => {
           navbarCloseHandler();
