@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import Header from '../../components/Header/Header'
 import LottieAnimation from '../../components/LottieAnimation/LottieAnimation'
 import useOnScreen from '../../Hooks/useOnScreen'
@@ -71,4 +71,4 @@ const AboutMe = () => {
   )
 }
 
-export default AboutMe
+export default memo(AboutMe)

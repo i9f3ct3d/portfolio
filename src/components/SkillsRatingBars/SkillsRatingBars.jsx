@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 import useOnScreen from '../../Hooks/useOnScreen'
 import './SkillsRatingBars.css'
 
@@ -39,4 +39,4 @@ const SkillsRatingBars = ({skillName, icon, skillPercentage, style}) => {
   )
 }
 
-export default SkillsRatingBars
+export default memo(SkillsRatingBars)

@@ -3,8 +3,9 @@ import { BsFacebook, BsLinkedin, BsGithub } from 'react-icons/bs'
 import Logo from '../Logo/Logo'
 import NavLinks from '../NavLinks/NavLinks'
 import myImg from '../../Images/myImg2.jpg'
-import './Navbar.css'
 import useOnScreen from '../../Hooks/useOnScreen'
+import MyImage from '../MyImage/MyImage'
+import './Navbar.css'
 
 const Navbar = () => {
 
@@ -33,6 +34,7 @@ const Navbar = () => {
         navbarRef.current.style.zIndex = '10'
         navbarRef.current.style.opacity = '1'
         navbarRef.current.style.transform = 'translate(0, 0) scaleX(1) scaleY(1)';
+        navbarRef.current.style.display = 'flex'
       }
     }
     
@@ -48,7 +50,6 @@ const Navbar = () => {
   return (
     <>
       <div onClick={() => {
-        // if(navbarRef.current) navbarRef.current.style.display = 'flex'
         hamburgerButtonClickHandler()
       }} className='hamburger-button__div'>
         <div className='hamburger-button hamburger-button1'/>
@@ -67,7 +68,9 @@ const Navbar = () => {
           />
           <div ref={imageRef} className='navbar__image-div'>
             <div className='navbar__image-border' />
-            <img src={myImg} alt='me' className='navbar__image' />
+            <MyImage
+              image = {<img src={myImg} alt='me' className='navbar__image' />}
+             />
           </div>
         </div>
         <div className='navlinks__container'>

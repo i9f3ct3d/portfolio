@@ -1,0 +1,5 @@
+.lazy-load__image-div{
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+}

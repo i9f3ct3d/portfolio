@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import './SkillLeaves.css'
 
 const SkillLeaves = ({text1, text2, diameter, delay}) => {
@@ -33,4 +33,4 @@ const SkillLeaves = ({text1, text2, diameter, delay}) => {
   )
 }
 
-export default SkillLeaves
+export default memo(SkillLeaves)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import BouncyLetter from '../BouncyLetter/BouncyLetter'
 import './Header.css'
 
@@ -42,4 +42,4 @@ const Header = ({text, style, textColor, textStyle, className}) => {
   )
 }
 
-export default Header
+export default memo(Header)

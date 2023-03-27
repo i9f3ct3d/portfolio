@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import Header from "../../components/Header/Header";
 import InstitutionCard from "../../components/InstitutionCard/InstitutionCard";
 import useOnScreen from "../../Hooks/useOnScreen";
@@ -115,4 +115,4 @@ const MeSoFar = () => {
     );
 };
 
-export default MeSoFar;
+export default memo(MeSoFar);

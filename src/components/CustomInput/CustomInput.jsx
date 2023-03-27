@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import './CustomInput.css'
 
 const CustomInput = ({ type, placeholder, style }) => {
@@ -22,4 +22,4 @@ const CustomInput = ({ type, placeholder, style }) => {
     )
 }
 
-export default CustomInput
+export default memo(CustomInput)

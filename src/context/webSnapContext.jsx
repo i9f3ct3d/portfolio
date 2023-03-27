@@ -6,8 +6,6 @@ const WebSnapGithubLink = createContext()
 const WebSnapGithubLinkUpdate = createContext()
 const WebSnapHostLink = createContext()
 const WebSnapHostLinkUpdate = createContext()
-// const Modal = createContext()
-// const ModalUpdate = createContext()
 
 export function useWebSnap(){
     return useContext(WebSnapContext)
@@ -29,14 +27,6 @@ export function useWebSnapHostLink(){
 export function useWebSnapHostLinkUpdate(){
     return useContext(WebSnapHostLinkUpdate)
 }
-
-// export function useModal(){
-//     return useContext(Modal)
-// }
-
-// export function useModalUpdate(){
-//     return useContext(ModalUpdate)
-// }
 
 export function WebSnapContextProvider({ children }){
     const [webSnap, setWebSnap] = useState()

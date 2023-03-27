@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { lazy, memo, Suspense, useEffect, useRef } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { FaGithubSquare } from 'react-icons/fa'
 import "./WebSnap.css";
 import { useWebSnap, useWebSnapGithubLink, useWebSnapGithubLinkUpdate, useWebSnapHostLinkUpdate, useWebSnapUpdate } from "../../context/webSnapContext";
+const MyImage = lazy(() => import('../MyImage/MyImage'))
 
 const WebSnap = ({ }) => {
   const webSnap = useWebSnap();
@@ -14,39 +15,43 @@ const WebSnap = ({ }) => {
   const webSnapRef = useRef()
 
   useEffect(() => {
-    if(webSnap){
+    if (webSnap) {
       webSnapRef.current.classList.add('web-snap__full-div__visible')
-    }else{
+    } else {
       webSnapRef.current.classList.remove('web-snap__full-div__visible')
     }
-  } ,[webSnap])
+  }, [webSnap])
 
   return (
     <div
       style={{
         visibility: !webSnap && "hidden",
       }}
-      ref = {webSnapRef}
+      ref={webSnapRef}
       className="web-snap__full-div"
     >
-        <div className="web-snap__closer-div">
-          <IoCloseOutline
-            onClick={() => {
-              webSnapUpdate(null);
-              updateGithubLink("")
-              updateHostLink("")
-            }}
-          />
-        </div>
-        <FaGithubSquare
-          className="web-snap__github-icon"
+      <div className="web-snap__closer-div">
+        <IoCloseOutline
           onClick={() => {
-            window.open(githubLink)
+            webSnapUpdate(null);
+            updateGithubLink("")
+            updateHostLink("")
           }}
         />
-        <img className="web-snap__image" src={webSnap} alt="img" />
+      </div>
+      <FaGithubSquare
+        className="web-snap__github-icon"
+        onClick={() => {
+          window.open(githubLink)
+        }}
+      />
+      <Suspense fallback = {<></>}>
+        <MyImage
+          image={<img className="web-snap__image" src={webSnap} alt="img" />}
+        />
+      </Suspense>
     </div>
   );
 };
 
-export default WebSnap;
+export default memo(WebSnap);

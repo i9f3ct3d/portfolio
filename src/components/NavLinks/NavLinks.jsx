@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
 import './NavLinks.css'
 
@@ -12,4 +12,4 @@ const NavLinks = ({text, style, onClick, to}) => {
   )
 }
 
-export default NavLinks
+export default memo(NavLinks)

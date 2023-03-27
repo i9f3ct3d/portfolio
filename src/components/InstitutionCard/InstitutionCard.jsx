@@ -1,4 +1,5 @@
 import React, {
+  memo,
   useEffect,
   useRef,
   useState,
@@ -80,4 +81,4 @@ const InstitutionCard = (
   );
 };
 
-export default InstitutionCard;
+export default memo(InstitutionCard);

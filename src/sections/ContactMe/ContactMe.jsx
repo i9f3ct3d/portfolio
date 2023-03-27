@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import CustomInput from '../../components/CustomInput/CustomInput'
 import Button from '../../components/Button/Button'
 import './ContactMe.css'
@@ -81,4 +81,4 @@ const ContactMe = () => {
     )
 }
 
-export default ContactMe
+export default memo(ContactMe)

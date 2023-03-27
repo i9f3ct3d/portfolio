@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { forwardRef, memo, useEffect, useRef } from "react";
 import Header from "../../components/Header/Header";
 import SkillLeaves from "../../components/SkillLeaves/SkillLeaves";
 import { SiCplusplus, SiMongodb } from "react-icons/si";
@@ -58,7 +58,6 @@ const Skills = ({ }, ref) => {
                             </p>
                         <span style = {{transform : 'translateX(-10px)', display : 'block'}} className="html_tags desc_html_tags">{'</p>'}</span>
                         <div ref = {rightBorderRef} className="skills__rating-div__right-border"/>
-                        {/* <span className="html_tags">{"< ul >"}</span> */}
                         <SkillsRatingBars
                             style={{
                                 marginLeft: "20px",
@@ -199,4 +198,4 @@ const Skills = ({ }, ref) => {
     );
 };
 
-export default forwardRef(Skills);
+export default memo(forwardRef(Skills));

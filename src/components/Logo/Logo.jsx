@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import BouncyLetter from '../BouncyLetter/BouncyLetter'
 import { useNavigate } from 'react-router-dom'
 import './Logo.css'
@@ -38,4 +38,4 @@ const Logo = ({ style, className }) => {
     )
 }
 
-export default Logo
+export default memo(Logo)

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import useOnScreen from '../../Hooks/useOnScreen'
 import './BouncyLetter.css'
 
@@ -42,4 +42,4 @@ const BouncyLetter = ({letter, letterStyle, className, timeout, children}) => {
   )
 }
 
-export default BouncyLetter
+export default memo(BouncyLetter)

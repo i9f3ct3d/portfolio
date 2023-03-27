@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react'
+import React, { forwardRef, memo, useEffect } from 'react'
 import useOnScreen from '../../../Hooks/useOnScreen'
 import './AboutMeText.css'
 
@@ -19,4 +19,4 @@ const AboutMeText = ({text, children, style, themeColor}, ref) => {
   )
 }
 
-export default forwardRef(AboutMeText)
+export default memo(forwardRef(AboutMeText))

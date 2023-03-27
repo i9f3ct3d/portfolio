@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useWebSnap, useWebSnapHostLink, useWebSnapUpdate } from '../../context/webSnapContext'
 import './Modal.css'
 
@@ -17,4 +17,4 @@ const Modal = () => {
   )
 }
 
-export default Modal
+export default memo(Modal)

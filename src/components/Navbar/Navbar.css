@@ -271,6 +271,7 @@
 @media only screen and (max-width: 1330px) {
   @keyframes animateNavbarOpener {
       0%{
+        display: flex;
         transform: var(--customTransform);
         opacity: 0;
       }
@@ -307,10 +308,8 @@
     overflow : hidden;
     transform-origin: top right;
     transform: var(--customTransform);
-  }
-
-  .navbar-open{
-    transition-delay: 0ms, 0ms, 500ms, 500ms, 0ms !important;
+    opacity: 0;
+    display: none;
   }
 
   .hamburger-button__div{

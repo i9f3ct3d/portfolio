@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import './IntroTags.css'
 
 const IntroTags = ({text, style}) => {
@@ -19,4 +19,4 @@ const IntroTags = ({text, style}) => {
   )
 }
 
-export default IntroTags
+export default memo(IntroTags)

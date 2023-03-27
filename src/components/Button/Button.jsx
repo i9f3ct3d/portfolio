@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import './Button.css'
 
 const Button = ({text, onClick, style}) => {
@@ -12,4 +12,4 @@ const Button = ({text, onClick, style}) => {
   )
 }
 
-export default Button
+export default memo(Button)
