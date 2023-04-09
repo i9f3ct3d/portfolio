@@ -275,7 +275,7 @@
         transform: var(--customTransform);
         opacity: 0;
       }
-      50%{
+      35%{
         transform: translate(-10px, 10px) scaleX(1) scaleY(1);
         opacity: 1;
       }
@@ -290,7 +290,7 @@
       transform: translate(0, 0) scaleX(1) scaleY(1);
       opacity: 1;
     }
-    50%{
+    65%{
       transform: translate(-10px, 10px) scaleX(1) scaleY(1);
       opacity: 1;
     }

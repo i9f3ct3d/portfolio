@@ -30,11 +30,11 @@ const Navbar = () => {
   const hamburgerButtonClickHandler = () => {
     console.log('clicked');
       if(navbarRef.current){
+        navbarRef.current.style.display = 'flex'
         navbarRef.current.style.animation = 'animateNavbarOpener 1000ms ease-in-out'
         navbarRef.current.style.zIndex = '10'
         navbarRef.current.style.opacity = '1'
         navbarRef.current.style.transform = 'translate(0, 0) scaleX(1) scaleY(1)';
-        navbarRef.current.style.display = 'flex'
       }
     }
     
@@ -44,6 +44,7 @@ const Navbar = () => {
         navbarRef.current.style.zIndex = '9'
         navbarRef.current.style.opacity = '0'
         navbarRef.current.style.transform = 'translate(-10px, 10px) scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')';
+        // navbarRef.current.style.display = 'none'
     }
   }
 
