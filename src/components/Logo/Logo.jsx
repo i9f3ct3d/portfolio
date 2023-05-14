@@ -3,7 +3,7 @@ import BouncyLetter from '../BouncyLetter/BouncyLetter'
 import { useNavigate } from 'react-router-dom'
 import './Logo.css'
 
-const Logo = ({ style, className }) => {
+const Logo = ({ style, className, theme }) => {
 
     const underlineRef = useRef()
     const navigate = useNavigate()
@@ -24,16 +24,17 @@ const Logo = ({ style, className }) => {
                 timeout={0}
             />
             <BouncyLetter letterStyle={{
-                position : 'relative'
+                position : 'relative',
+                color : theme && theme == 'light' && 'black'
             }} className='logo__rest-name' letter='u' timeout={200}>
-                <span ref={underlineRef} className='underline'></span>
+                <span style = {theme && theme == 'light' && {backgroundColor : 'black'}} ref={underlineRef} className='underline'></span>
             </BouncyLetter>
-            <BouncyLetter className='logo__rest-name' letter='s' timeout={400}></BouncyLetter>
-            <BouncyLetter className='logo__rest-name' letter='h' timeout={600}></BouncyLetter>
-            <BouncyLetter className='logo__rest-name' letter='a' timeout={800}></BouncyLetter>
-            <BouncyLetter className='logo__rest-name' letter='n' timeout={1000}></BouncyLetter>
-            <BouncyLetter className='logo__rest-name' letter='t' timeout={1200}></BouncyLetter>
-            <BouncyLetter className='logo__rest-name' letter='a' timeout={1400}></BouncyLetter>
+            <BouncyLetter letterStyle = {theme && theme == 'light' && {color : 'black'}} className='logo__rest-name' letter='s' timeout={400}></BouncyLetter>
+            <BouncyLetter letterStyle = {theme && theme == 'light' && {color : 'black'}} className='logo__rest-name' letter='h' timeout={600}></BouncyLetter>
+            <BouncyLetter letterStyle = {theme && theme == 'light' && {color : 'black'}} className='logo__rest-name' letter='a' timeout={800}></BouncyLetter>
+            <BouncyLetter letterStyle = {theme && theme == 'light' && {color : 'black'}} className='logo__rest-name' letter='n' timeout={1000}></BouncyLetter>
+            <BouncyLetter letterStyle = {theme && theme == 'light' && {color : 'black'}} className='logo__rest-name' letter='t' timeout={1200}></BouncyLetter>
+            <BouncyLetter letterStyle = {theme && theme == 'light' && {color : 'black'}} className='logo__rest-name' letter='a' timeout={1400}></BouncyLetter>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import { lazy, useRef, Suspense } from "react";
 import { WebSnapContextProvider } from "./context/webSnapContext";
 import Navbar from "./components/Navbar/Navbar";
 import Modal from "./components/Modal/Modal";
+import NewNavbar from "./components/NewNavbar/NewNavbar";
 
 const WebSnap = lazy(() => import("./components/WebSnap/WebSnap"))
 const ContactMe = lazy(() => import("./sections/ContactMe/ContactMe"))
@@ -48,6 +49,7 @@ function App() {
         <WebSnapContextProvider>
           <Router>
             <Modal />
+            <NewNavbar isOpen={false} />
             <Navbar />
             <Suspense fallback={<></>}>
               <WebSnap />

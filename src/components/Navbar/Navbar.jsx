@@ -14,7 +14,7 @@ const Navbar = () => {
   const navbarRef = useRef()
 
   useEffect(() => {
-      navbarRef.current.style.setProperty('--customTransform', 'translate(-10px, 10px) scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')')
+      // navbarRef.current.style.setProperty('--customTransform', 'translate(-10px, 10px) scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')')
   },[])
 
   useEffect(() => {
@@ -30,20 +30,21 @@ const Navbar = () => {
   const hamburgerButtonClickHandler = () => {
     console.log('clicked');
       if(navbarRef.current){
-        navbarRef.current.style.display = 'flex'
+        navbarRef.current.classList.add('navbar__visible')
+        // navbarRef.current.style.display = 'flex'
+        // navbarRef.current.style.boxShadow = '-4px 0 10px black'
         navbarRef.current.style.animation = 'animateNavbarOpener 1000ms ease-in-out'
-        navbarRef.current.style.zIndex = '10'
-        navbarRef.current.style.opacity = '1'
-        navbarRef.current.style.transform = 'translate(0, 0) scaleX(1) scaleY(1)';
+        // navbarRef.current.style.zIndex = '10'
+        // navbarRef.current.style.opacity = '1'
+        navbarRef.current.style.transform = 'translateX(0)';
       }
     }
     
     const navbarCloseHandler = () => {
       if(navbarRef.current){
+        navbarRef.current.classList.remove('navbar__visible')
         navbarRef.current.style.animation = 'animateNavbarCloser 1000ms ease-in-out'
-        navbarRef.current.style.zIndex = '9'
-        navbarRef.current.style.opacity = '0'
-        navbarRef.current.style.transform = 'translate(-10px, 10px) scaleY(' + (32 / window.innerHeight) + ') scaleX(' + (40 / window.innerWidth) + ')';
+        navbarRef.current.style.transform = 'translateX(100%)';
         // navbarRef.current.style.display = 'none'
     }
   }
@@ -79,10 +80,20 @@ const Navbar = () => {
           <NavLinks
             text='HOME'
             onClick={navLinksClickHandler}
+            style = {{
+              fontSize : '1.6rem',
+              color : 'white',
+              fontWeight : '700',
+              margin : '20px 0',
+            }}
           />
           <NavLinks
             text='ME SO-FAR'
             style={{
+              fontSize : '1.6rem',
+              color : 'white',
+              fontWeight : '700',
+              margin : '20px 0',
               borderTop: 'none'
             }}
 
@@ -92,6 +103,10 @@ const Navbar = () => {
           <NavLinks
             text='MY SKILLS'
             style={{
+              fontSize : '1.6rem',
+              color : 'white',
+              fontWeight : '700',
+              margin : '20px 0',
               borderTop: 'none'
             }}
 
@@ -101,6 +116,10 @@ const Navbar = () => {
           <NavLinks
             text='PROJECTS'
             style={{
+              fontSize : '1.6rem',
+              color : 'white',
+              fontWeight : '700',
+              margin : '20px 0',
               borderTop: 'none'
             }}
 
