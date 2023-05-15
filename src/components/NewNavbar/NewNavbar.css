@@ -255,6 +255,10 @@
         display: inline-flex;
     }
 
+    .new-navbar__my-image{
+        height: 174px !important;
+    }
+
     .new-navbar__content-div__open{
         opacity: 1;
         transform: translateY(0);
