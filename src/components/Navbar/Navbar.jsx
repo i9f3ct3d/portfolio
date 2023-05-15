@@ -82,7 +82,7 @@ const Navbar = () => {
             onClick={navLinksClickHandler}
             style = {{
               fontSize : '1.6rem',
-              color : 'white',
+              // color : 'white',
               fontWeight : '700',
               margin : '20px 0',
             }}
@@ -91,7 +91,7 @@ const Navbar = () => {
             text='ME SO-FAR'
             style={{
               fontSize : '1.6rem',
-              color : 'white',
+              // color : 'white',
               fontWeight : '700',
               margin : '20px 0',
               borderTop: 'none'
@@ -104,7 +104,7 @@ const Navbar = () => {
             text='MY SKILLS'
             style={{
               fontSize : '1.6rem',
-              color : 'white',
+              // color : 'white',
               fontWeight : '700',
               margin : '20px 0',
               borderTop: 'none'
@@ -117,7 +117,7 @@ const Navbar = () => {
             text='PROJECTS'
             style={{
               fontSize : '1.6rem',
-              color : 'white',
+              // color : 'white',
               fontWeight : '700',
               margin : '20px 0',
               borderTop: 'none'

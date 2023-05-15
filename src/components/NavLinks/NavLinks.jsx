@@ -7,7 +7,7 @@ const NavLinks = ({text, style, onClick, to}) => {
     <NavLink to = {to ? to : '/'} style = {style && style} onClick = {() => {
       onClick && onClick()
     }} className='navlink__full-div'>
-        {({isActive}) => <div style = {{display : 'inline-flex', color : isActive && '#08FDD8'}}>{text}</div>}
+        {({isActive}) => <div style = {{display : 'inline-flex', color : isActive && '#000', WebkitTextStroke : isActive && '0px white'}}>{text}</div>}
     </NavLink>
   )
 }

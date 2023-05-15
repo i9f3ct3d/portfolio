@@ -6,7 +6,8 @@
     font-weight: 900;
     font-family: 'Noto Sans';
     font-family: 'Dancing Script';
-    color: #08FDD8;
+    /* color: #08FDD8; */
+    color: white;
 }
 
 @media only screen and (max-width : 550px) {

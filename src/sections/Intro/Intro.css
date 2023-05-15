@@ -9,6 +9,7 @@
 
 .scroll-down__indicator{
     color: rgb(174, 174, 174);
+    color: white;
     position: absolute;
     transform-origin: right;
     transform: rotate(90deg);
@@ -95,6 +96,7 @@
     height: 100%;
     width: 2px;
     background-color: #08FDD8;
+    background-color: white;
     top: 0;
     left: -20px;
     border-radius: 5px;

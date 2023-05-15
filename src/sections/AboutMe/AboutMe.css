@@ -47,6 +47,7 @@
     top: 100%;
     transform: translate(-50%, 0);
     border-bottom: 50px solid rgb(214, 214, 214);
+    border-bottom: 50px solid white;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     opacity: 0;

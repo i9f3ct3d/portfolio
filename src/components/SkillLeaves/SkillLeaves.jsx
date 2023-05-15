@@ -3,7 +3,8 @@ import './SkillLeaves.css'
 
 const SkillLeaves = ({text1, text2, diameter, delay}) => {
 
-  const colors = ["#0BD2B4", "#0BD2B4", "#0BD2B4", "#0BD2B4", "#0BD2B4"];
+  // const colors = ["#0BD2B4", "#0BD2B4", "#0BD2B4", "#0BD2B4", "#0BD2B4"];
+  const colors = ["#fff", "#fff", "#fff", "#fff", "#fff"];
 
   const divRef1 = useRef()
   const textRef1 = useRef()

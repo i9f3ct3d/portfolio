@@ -23,8 +23,7 @@ const NewNavbar = ({ }) => {
     }
 
     const navLinksClickHandler = () => {
-        changeNavbarState()
-        // if(navbarRef.current && window.innerWidth <= 1330) navbarCloseHandler()
+        if(ref.current && window.innerWidth <= 1330) changeNavbarState()
     }
 
     return (

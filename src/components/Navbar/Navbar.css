@@ -1,13 +1,14 @@
 .navbar__full-div {
 
   box-sizing: border-box;
-  width: 11rem;
+  width: 12rem;
   height: 100vh;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 10;
   background-color: #181818;
+  background-color: #ffffff;
   transition: box-shadow 500ms ease-in-out;
 
   display: flex;
@@ -17,7 +18,7 @@
   flex-wrap: wrap;
   row-gap: 30px;
   padding-top: 155px;
-  border-radius: 10px 0 0 10px;
+  /* border-radius: 10px 0 0 10px; */
 }
 
 .hamburger-button__div{

@@ -40,6 +40,7 @@
   right: -100px;
   top: 0;
   background-color: #0BD2B4;
+  background-color: white;
   transform: translateY(-500px);
   opacity: 0;
   transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;

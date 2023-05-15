@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { lazy, useRef, Suspense } from "react";
 import { WebSnapContextProvider } from "./context/webSnapContext";
-import Navbar from "./components/Navbar/Navbar";
 import Modal from "./components/Modal/Modal";
 import NewNavbar from "./components/NewNavbar/NewNavbar";
 
@@ -49,8 +48,7 @@ function App() {
         <WebSnapContextProvider>
           <Router>
             <Modal />
-            <NewNavbar isOpen={false} />
-            <Navbar />
+            <NewNavbar />
             <Suspense fallback={<></>}>
               <WebSnap />
             </Suspense>
